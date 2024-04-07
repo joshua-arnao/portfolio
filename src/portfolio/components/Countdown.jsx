@@ -8,6 +8,7 @@ import { getDatabase, ref, get, set } from 'firebase/database';
 const firebaseConfig = {
   apiKey: 'AIzaSyAWoe_ckJ2DcHEU7iQndqYDtfuW_oQCv1U',
   authDomain: 'portfolio-5f4c5.firebaseapp.com',
+  databaseURL: 'https://portfolio-5f4c5-default-rtdb.firebaseio.com',
   projectId: 'portfolio-5f4c5',
   storageBucket: 'portfolio-5f4c5.appspot.com',
   messagingSenderId: '732572367080',

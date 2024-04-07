@@ -1,6 +1,6 @@
-import { ThemeProvider } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import { darkTheme } from './'
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { darkTheme } from './index.js';
 
 export const AppTheme = ({ children }) => {
   return (
@@ -8,5 +8,5 @@ export const AppTheme = ({ children }) => {
       <CssBaseline />
       {children}
     </ThemeProvider>
-  )
-}
+  );
+};

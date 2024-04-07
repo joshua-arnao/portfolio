@@ -1,6 +1,6 @@
-import { Box } from '@mui/material'
-import { AppTheme } from './theme'
-import { PortfolioRoutes } from './portfolio/routes/PortfolioRoutes'
+import { Box } from '@mui/material';
+import { AppTheme } from './theme';
+import { PortfolioRoutes } from './portfolio/routes/PortfolioRoutes';
 
 export const PortfolioApp = () => {
   return (
@@ -15,5 +15,5 @@ export const PortfolioApp = () => {
         <PortfolioRoutes />
       </Box>
     </AppTheme>
-  )
-}
+  );
+};
