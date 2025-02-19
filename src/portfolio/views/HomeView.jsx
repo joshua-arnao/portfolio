@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { Timeline } from '@mui/lab';
 import { timelineItemClasses } from '@mui/lab/TimelineItem';
-import { Countdown, MyTimeLine, ChipSkill } from '../components/index';
+import { MyTimeLine, ChipSkill } from '../components/index';
 
 import PlaceIcon from '@mui/icons-material/Place';
 import CakeIcon from '@mui/icons-material/Cake';
@@ -109,8 +109,6 @@ export const HomeView = ({ currentTheme }) => {
               style={{ color: text.other, fontSize: '13px' }}
             />
           </Stack>
-
-          <Countdown currentTheme={currentTheme} />
         </Box>
       </Box>
 
