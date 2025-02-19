@@ -10,6 +10,7 @@ import {
 import { Timeline } from '@mui/lab';
 import { timelineItemClasses } from '@mui/lab/TimelineItem';
 import { MyTimeLine, ChipSkill } from '../components/index';
+import { MyTimeLine, ChipSkill } from '../components/index';
 
 import PlaceIcon from '@mui/icons-material/Place';
 import CakeIcon from '@mui/icons-material/Cake';
@@ -23,6 +24,15 @@ const skills = [
   'Notion',
   'Frontend',
   'React JS',
+  'HTML',
+  'CSS',
+  'Comunicación efectiva',
+  'Bizagi',
+  'Google Analytics',
+  'IA Generativa',
+  'Gestión de proyectos',
+  'Optimización de procesos',
+  'Pensamiento crítico'
   'Analytics',
   'Excel',
   'IA Generativa'
@@ -77,6 +87,15 @@ export const HomeView = ({ currentTheme }) => {
           gap='24px'
           style={{ width: '100%' }}
         >
+          <Box>
+            <Typography variant='h2' component='div' textAlign='center'>
+              Joshua Arnao Canessa
+            </Typography>
+            <Typography variant='subtitle1' component='div' textAlign='center'>
+              Ingeniero Industrial
+            </Typography>
+          </Box>
+
           <Typography variant='h2' component='div' textAlign='center'>
             Joshua Arnao Canessa
           </Typography>
@@ -159,6 +178,11 @@ export const HomeView = ({ currentTheme }) => {
           }}
         >
           {experiences.map((experience, index) => (
+            <MyTimeLine
+              experience={experience}
+              key={index}
+              currentTheme={currentTheme}
+            />
             <MyTimeLine experience={experience} key={index} />
           ))}
         </Timeline>
@@ -169,6 +193,7 @@ export const HomeView = ({ currentTheme }) => {
           Links
         </Typography>
 
+        <Stack direction='row' spacing={1} alignItems='center'>
         <Stack direction='row' spacing={1}>
           <Link
             href='https://pe.linkedin.com/in/joshua-arnao-canessa-832090213'
@@ -176,6 +201,17 @@ export const HomeView = ({ currentTheme }) => {
             rel='noopener'
           >
             <LinkedInIcon color={'secondary'} />
+          </Link>
+
+          <Link
+            href='https://www.figma.com/@joshuaarnao'
+            target='_blank'
+            rel='noopener'
+          >
+            <img
+              style={{ height: '18px', width: '18px', color: '#FFF' }}
+              src='/assets/photos/figma-logo.svg'
+            />
           </Link>
         </Stack>
       </Box>
