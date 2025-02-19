@@ -14,38 +14,22 @@ import { MyTimeLine, ChipSkill } from '../components/index';
 import PlaceIcon from '@mui/icons-material/Place';
 import CakeIcon from '@mui/icons-material/Cake';
 import EmailIcon from '@mui/icons-material/Email';
-// import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const skills = [
-  'React.js',
-  'Next.js',
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'Node.js',
-  'Express.js',
-  'API REST',
-  'MongoDB',
-  'PostgreSQL',
-  'Git',
-  'GitHub',
-  'Docker',
-  'CI/CD',
-
-  'UX/UI Designer',
-  'Figma Avanzado',
+  'Product Designer',
+  'Figma',
   'Adobe XD',
-  'Metodologías Ágiles',
-
-  'Optimización de procesos',
-  'Pensamiento crítico',
-  'Comunicación Efectiva'
+  'Notion',
+  'Frontend',
+  'React JS',
+  'Analytics',
+  'Excel',
+  'IA Generativa'
 ];
 
 const experiences = [
-  { year: 2016, type: 'work', title: 'Analista de Mejora de procesos' },
+  { year: 2016, type: 'work', title: 'Analista de Mejora de proceso' },
   { year: 2018, type: 'work', title: 'Analista Six Sigma' },
   { year: 2019, type: 'study', title: 'Curso UX/UI' },
   { year: 2020, type: 'work', title: 'Analista UX/UI' },
@@ -53,27 +37,15 @@ const experiences = [
     year: 2021,
     type: 'study',
     title: 'Especialización UI',
-    link: 'https://portfolio-documents.s3.us-east-1.amazonaws.com/Joshua/certificado-medu.pdf'
+    link: 'https://medu-certifications.medu.academy/Jr8JsIguhdH61inKXABL'
   },
   {
     year: 2022,
     type: 'study',
     title: 'Desarrollo Web Fullstack',
-    link: 'https://portfolio-documents.s3.us-east-1.amazonaws.com/Joshua/certificado-tecsup.pdf'
+    link: 'https://academico-cloud.tecsup.edu.pe/pcc/#/home/certificado?c=583348&n=COD%2FCPE%2F22%2F106&t=E'
   },
-  { year: 2022, type: 'work', title: 'Product Designer' },
-  {
-    year: 2024,
-    type: 'study',
-    title: 'Gestion de Proyectos en base al PMBOK',
-    link: 'https://drive.google.com/file/d/10RfRqYp9Ve7Hbp0UrMvU4ohIz5YOcK9f/view'
-  },
-  {
-    year: 2024,
-    type: 'study',
-    title: 'Scrum Fundamentals Certified',
-    link: 'https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-JoshuaArnao-1053623.pdf'
-  }
+  { year: 2022, type: 'work', title: 'Product Designer' }
 ];
 
 export const HomeView = ({ currentTheme }) => {
@@ -105,19 +77,12 @@ export const HomeView = ({ currentTheme }) => {
           gap='24px'
           style={{ width: '100%' }}
         >
-          <Box>
-            <Typography variant='h2' component='div' textAlign='center'>
-              Joshua Arnao Canessa
-            </Typography>
-            <Typography variant='subtitle1' component='div' textAlign='center'>
-              Desarrollador Full Stack Jr | UX Engineer
-            </Typography>
-          </Box>
-
+          <Typography variant='h2' component='div' textAlign='center'>
+            Joshua Arnao Canessa
+          </Typography>
           <Typography component='div' textAlign='justify'>
-            Apasionado por el desarrollo de aplicaciones web escalables y
-            optimizadas, con experiencia en tecnologías frontend y backend,
-            metodologías ágiles y diseño centrado en el usuario.
+            Diseñador de productos digitales con experiencia en metodología
+            Agile, design thinking y CPS.{' '}
           </Typography>
           <Stack
             direction='row'
@@ -153,17 +118,18 @@ export const HomeView = ({ currentTheme }) => {
         </Typography>
 
         <Typography component='div' textAlign='justify'>
-          Soy un Desarrollador Full Stack con experiencia en Frontend y Backend,
-          capaz de construir soluciones digitales desde la arquitectura hasta la
-          interfaz de usuario. Mi formación en ingeniería industrial y diseño
-          UX/UI me permite desarrollar productos digitales funcionales,
-          intuitivos y optimizados para la experiencia del usuario.
+          Soy un apasionado Diseñador de Productos Digitales con un deseo
+          constante de innovar y mejorar. Siempre estoy buscando nuevas formas
+          de combinar la creatividad, la eficiencia y la mejora en la
+          experiencia del usuario.
           <br />
-          <br />
-          Manejo tecnologías como React, Node.js, Express y bases de datos
-          SQL/NoSQL para crear aplicaciones eficientes y escalables. Mi enfoque
-          se basa en la mejora continua, aplicando metodologías ágiles y buenas
-          prácticas de desarrollo para entregar software de calidad.
+          Mi formación en ingeniería industrial y mi amplia experiencia en
+          diseño me han inculcado la importancia de encontrar el equilibrio
+          entre la estética y la funcionalidad. Mi misión es crear experiencias
+          digitales que no solo atraigan visualmente, sino que también
+          solucionen problemas reales. Con un enfoque metódico y una pasión
+          incansable por el aprendizaje, abordo los desafíos con eficacia y
+          desvelo soluciones innovadoras.
         </Typography>
       </Box>
 
@@ -193,11 +159,7 @@ export const HomeView = ({ currentTheme }) => {
           }}
         >
           {experiences.map((experience, index) => (
-            <MyTimeLine
-              experience={experience}
-              key={index}
-              currentTheme={currentTheme}
-            />
+            <MyTimeLine experience={experience} key={index} />
           ))}
         </Timeline>
       </Box>
@@ -207,24 +169,13 @@ export const HomeView = ({ currentTheme }) => {
           Links
         </Typography>
 
-        <Stack direction='row' spacing={1} alignItems='center'>
+        <Stack direction='row' spacing={1}>
           <Link
-            href='https://github.com/joshua-arnao'
+            href='https://pe.linkedin.com/in/joshua-arnao-canessa-832090213'
             target='_blank'
             rel='noopener'
           >
-            <GitHubIcon color={'secondary'} />
-          </Link>
-
-          <Link
-            href='https://www.figma.com/@joshuaarnao'
-            target='_blank'
-            rel='noopener'
-          >
-            <img
-              style={{ height: '18px', width: '18px', color: '#FFF' }}
-              src='/assets/photos/figma-logo.svg'
-            />
+            <LinkedInIcon color={'secondary'} />
           </Link>
         </Stack>
       </Box>
