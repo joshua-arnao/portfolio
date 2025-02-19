@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { Timeline } from '@mui/lab';
 import { timelineItemClasses } from '@mui/lab/TimelineItem';
-import { Countdown, MyTimeLine, ChipSkill } from '../components/index';
+import { MyTimeLine, ChipSkill } from '../components/index';
 
 import PlaceIcon from '@mui/icons-material/Place';
 import CakeIcon from '@mui/icons-material/Cake';
@@ -32,12 +32,12 @@ const skills = [
   'HTML',
   'CSS',
   'Comunicación efectiva',
-  'Bizagi',  
+  'Bizagi',
   'Google Analytics',
   'IA Generativa',
   'Gestión de proyectos',
   'Optimización de procesos',
-  'Pensamiento crítico',
+  'Pensamiento crítico'
 ];
 
 const experiences = [
@@ -109,7 +109,7 @@ export const HomeView = ({ currentTheme }) => {
               Ingeniero Industrial
             </Typography>
           </Box>
-          
+
           <Typography component='div' textAlign='justify'>
             Diseñador de productos digitales con experiencia en metodología
             Agile, Design Thinking y CPS.{' '}
@@ -139,8 +139,6 @@ export const HomeView = ({ currentTheme }) => {
               style={{ color: text.other, fontSize: '13px' }}
             />
           </Stack>
-
-          <Countdown currentTheme={currentTheme} />
         </Box>
       </Box>
 
@@ -191,7 +189,11 @@ export const HomeView = ({ currentTheme }) => {
           }}
         >
           {experiences.map((experience, index) => (
-            <MyTimeLine experience={experience} key={index} currentTheme={currentTheme} />
+            <MyTimeLine
+              experience={experience}
+              key={index}
+              currentTheme={currentTheme}
+            />
           ))}
         </Timeline>
       </Box>
@@ -201,7 +203,7 @@ export const HomeView = ({ currentTheme }) => {
           Links
         </Typography>
 
-        <Stack direction='row' spacing={1}  alignItems='center'>
+        <Stack direction='row' spacing={1} alignItems='center'>
           <Link
             href='https://pe.linkedin.com/in/joshua-arnao-canessa-832090213'
             target='_blank'
@@ -215,10 +217,11 @@ export const HomeView = ({ currentTheme }) => {
             target='_blank'
             rel='noopener'
           >
-            <img style={{height:'18px', width:'18px', color:'#FFF'}} src='/assets/photos/figma-logo.svg' />
+            <img
+              style={{ height: '18px', width: '18px', color: '#FFF' }}
+              src='/assets/photos/figma-logo.svg'
+            />
           </Link>
-
-
         </Stack>
       </Box>
     </Container>
