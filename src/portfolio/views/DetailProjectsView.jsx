@@ -16,12 +16,14 @@ import CheckIcon from '@mui/icons-material/Check';
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 import { darkTheme } from '../../theme/darkTheme';
 import { ChipSkill } from '../components/ChipSkill';
+import LinkIcon from '@mui/icons-material/Link'
 
 const projects = [
   {
     projectId: 1,
+    link: [],
     title: 'Rediseño rentadora de auto | App',
-    tools: ['React', 'Node.js', 'Notion'],
+    tools: ['Figma'],
     description:
       'Este proyecto se centra en mejorar la aplicación móvil de una rentadora de autos en Cusco Perú, resolviendo los puntos críticos que enfrentan los usuarios durante el uso del producto.\n\nDebido a la confidencialidad del trabajo, no es posible mostrar el caso de estudio completo.',
     rol: [
@@ -48,6 +50,9 @@ const projects = [
         'Los usuarios eligen el tipo de auto, la lista de proveedores que ofrecen ese tipo de auto y el paquete que ofrece la empresa.',
         'Los usuarios obtienen información sobre el tipo de auto, el proveedor y el paquete elegido.',
         'Los usuarios ingresa la ubicación de recojo y/o devolución dle auto, junto con zonas adicionales que desea visitar.'
+      ],
+      images: [
+        '/assets/photos/Backgound&Problem.png',
       ]
     },
     breacking: {
@@ -60,8 +65,8 @@ const projects = [
         'Iteración del diseño y pruebas de usabilidad.'
       ],
       images: [
-        '/assets/photos/imagePortfolio.png',
-        '/assets/photos/imagePortfolio.png'
+        '/assets/photos/InquiriesProblem.png',
+        '/assets/photos/SoluctionsProblem.png'
       ]
     },
     overall: {
@@ -71,7 +76,7 @@ const projects = [
         'Página de revisión de reserva, zonas adicionales y formulario de reserva rediseñadas (aumento del 19,8%).',
         'Disminución de quejas y consultas en un 5%.'
       ],
-      images: ['/assets/photos/imagePortfolio.png']
+      images: ['/assets/photos/ABTesting.png']
     },
     conclusions: {
       description: '',
@@ -85,11 +90,129 @@ const projects = [
   },
   {
     projectId: 2,
-    title: 'Mobile App Redisgn 2| App',
+    link: [],
+    title: 'Proceso de Créditos | Web',
+    tools: ['React', 'Marvel', 'Figma', 'Looker Studio'],
     description:
-      'Redesigning tiket.coms Car Rentals mobile app due to high inquiries regarding the product & service',
-    imgCard: '/assets/img/ImgProjects.png',
-    tools: ['React', 'Node.js']
+      'Este proyecto buscaba desarrollar una plataforma intermediaria entre clientes y bancos en Panamá, simplificando y acelerando el proceso de acceso a productos financieros. La solución abordó la complejidad del sistema tradicional mediante una experiencia digital eficiente.',
+    rol: [
+      'Validación de la idea mediante entrevistas y análisis de mercado.',
+      'Diseño de flujos y prototipos de baja y alta fidelidad.',
+      'Desarrollo de algunas secciones de la plataforma.',
+      'Implementación de tests para mejorar la experiencia del usuario.'
+    ],
+    problem: {
+      description:
+        'En Panamá, acceder a un crédito es un proceso complejo y lento, con múltiples formularios, largas filas, y gasto de tiempo en clientes que no aplican. Las entidades financieras enfrentaban dificultades para identificar clientes viables y optimizar su proceso de generación de leads.',
+      pareto: []
+    },
+    understanding: {
+      description:
+        'La plataforma está diseñada para conectar usuarios (asalariados, independientes y PYMEs) con bancos y cooperativas, consolidando información bancaria en un solo lugar. Los usuarios pueden:',
+      list: [
+        'Comparar y aplicar a múltiples entidades.',
+        'Recibir asesoría financiera y un perfil crediticio online.',
+        'Reducir hasta un 60% del tiempo en procesos de análisis y pre-aprobaciones.'
+      ],
+      images: [
+        '/assets/photos/CreditoUnderstand.png',
+      ]
+    },
+    breacking: {
+      description:
+        'Métodos de investigación:',
+      list: [
+        'Encuestas (validación: 80% de los encuestados usarían la plataforma).',
+        'Análisis de procesos bancarios tradicionales.',
+        'Mapas de experiencia de usuario para identificar puntos críticos.',
+      ],
+      images: [
+        '/assets/photos/CreditoBreacking.png',
+        '/assets/photos/CreditoBreackingSecond.png'
+      ]
+    },
+    overall: {
+      description: 'Propuesta inicial:',
+      list: [
+        'Incremento del interés por la plataforma: el 80% de los encuestados la consideraron útil.',
+        'Reducción esperada del tiempo de proceso en un 60%.',
+        'Incremento en leads viables para entidades financieras.'
+      ],
+      images: ['/assets/photos/CreditoResults.png']
+    },
+    conclusions: {
+      description: '',
+      list: [
+        'Desarrollé habilidades para estructurar validaciones tempranas de ideas de negocio.',
+        'Aprendí a diseñar y testear prototipos de baja y alta fidelidad para plataformas complejas.',
+        'Me enfoqué en diseñar flujos que respondieran a necesidades tanto de usuarios como de entidades financieras.'
+      ],
+      images: []
+    }
+  },
+  {
+    projectId: 3,
+    link: ['https://www.figma.com/community/widget/1365813831823501864'],
+    title: 'Figma Tracking Analytics | Widget',
+    tools: ['TypeScript', 'Figma', 'Google Analytics'],
+    description:
+      'Como Product Designer con un background Fullstack, decidí contribuir a la comunidad de Figma al crear un widget que facilita la documentación y el seguimiento de etiquetas para Google Analitycs en los diseños trabajados en figma. Este widget busca mejorar la colaboración entre equipos de diseño y desarrollo, dejando claro dónde se deben asignar las etiquetas para Google Analytics ya que la medición precisa de datos es crucial para tomar decisiones informadas, y este widget simplifica el proceso de documentación.',
+    rol: [
+      'Identifiqué la necesidad de una herramienta que conectara de manera eficiente a diseñadores y desarrolladores en la asignación de etiquetas.',
+      'Diseñé y desarrollé el widget en Figma utilizando TypeScript, garantizando una experiencia fluida para los usuarios',
+      'Iteré el diseño del widget basándome en el feedback de usuarios de la comunidad de Figma.',
+    ],
+    problem: {
+      description:
+        'Los equipos de UX y desarrollo frecuentemente enfrentan desafíos en la documentación y ubicación precisa de etiquetas para herramientas como Google Analytics, lo que afecta la calidad del análisis de datos. Este widget soluciona el problema al:',
+      pareto: [
+        'Proveer una interfaz clara y accesible para asignar etiquetas directamente en los diseños.',
+        'Establecer un puente entre diseñadores y desarrolladores, mejorando la comunicación y evitando malentendidos en la implementación.',
+        'Facilitar la medición precisa de datos para decisiones estratégicas más efectivas.',
+      ]
+    },
+    understanding: {
+      description:
+        'Los diseñadores suelen necesitar asignar etiquetas para rastrear interacciones clave en sus prototipos. Este widget permite:',
+      list: [
+        'Identificar de forma visual dónde deben ubicarse las etiquetas en los diseños.',
+        'Documentar estas etiquetas para un fácil acceso y comprensión por parte del equipo de desarrollo.',
+      ],
+      images: [
+        '/assets/photos/WidgetUnderstand.png',
+      ]
+    },
+    breacking: {
+      description:
+        '',
+      list: [
+        'Realicé entrevistas con diseñadores y desarrolladores para identificar los puntos de fricción en la documentación de etiquetas.',
+        'Analicé el flujo de trabajo en Figma para asegurar que la herramienta fuera intuitiva y no interfiriera en la creatividad del diseño.',
+        'Diseñé iterativamente el widget, probándolo con miembros de la comunidad y ajustando según el feedback recibido.',
+      ],
+      images: [
+        '/assets/photos/WidgetBreacking.png',
+        '/assets/photos/WidgetBreackingSecond.png'
+      ]
+    },
+    overall: {
+      description: '',
+      list: [
+        'La herramienta permitió un proceso más organizado y eficiente para documentar y asignar etiquetas, reduciendo errores en la implementación.',
+        'Se tiene mas de 1400 usuarios usando diariamente el widget.',
+        'En mi equipo de trabajo se redujo en mas de un 90% las repreguntas o malos entendidos en las asignaciones de las etiquetas'
+      ],
+      images: ['/assets/photos/WidgetResults.png']
+    },
+    conclusions: {
+      description: '',
+      list: [
+        'Aprendí a combinar habilidades de diseño y desarrollo para crear herramientas útiles y bien recibidas por la comunidad.',
+        'Fortalecí mi capacidad de abordar problemas de comunicación entre equipos multidisciplinarios, aportando soluciones tangibles.',
+        'Entendí la importancia de las herramientas visuales para mejorar la colaboración en proyectos de medición y análisis de datos.'
+      ],
+      images: []
+    }
   }
 ];
 
@@ -140,6 +263,19 @@ export const DetailProjectsView = ({ currentTheme }) => {
           <ChipSkill key={index} label={tool} currentTheme={currentTheme} />
         ))}
       </Stack>
+
+      <Box>
+        {project.link.map((link, index)=>(
+          <Box key={index} style={{display:'flex', alignItems:'center', gap:'8px'}}>
+            <div style={{display:'flex', alignItems: 'center', height: '22px', padding:'1px 8px', borderRadius: '6px', background: 'rgba(154, 230, 180, 0.16)'}}>
+              <p style={{fontSize:'12px', color: '#9AE6B4', fontFamily: 'Inter', lineHeight: '20px'}}>Link</p>
+            </div>
+            <Linked  href={link} target='_blank' color={'#FF33BB'} fontSize='14px'>Clic para ver el Proyecto <LinkIcon color={'#FF33BB'} fontSize='14px'/></Linked> 
+          </Box>
+          
+        ))}
+      </Box>
+
 
       <Box width='100%' display='flex' flexDirection='column' gap='16px'>
         <Typography variant='subtitle1' component='div' width='100%'>
@@ -229,11 +365,15 @@ export const DetailProjectsView = ({ currentTheme }) => {
             ))}
           </List>
         </Typography>
+
+        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+          {Object.values(project.understanding.images).map((image, index) => (
+            <img key={index} src={image} />
+          ))}
+        </Box>
       </Box>
 
-      <Box width='100%' display='flex' flexDirection='column' gap='16px'>
-        <img src='/assets/photos/imagePortfolio.png' />
-      </Box>
+      
 
       <Box width='100%' display='flex' flexDirection='column' gap='16px'>
         <Typography variant='subtitle1' component='div' width='100%'>
