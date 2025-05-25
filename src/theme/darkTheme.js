@@ -36,17 +36,19 @@ export const darkTheme = createTheme({
       main: '#252525',
       light: '#252525'
     },
-    secondary: { main: '#FFF' },
+    secundary: { main: '#FFF' },
     text: {
       primary: '#FFF',
-      secondary: '#000',
+      secundary: '#000',
       other: '#FFFFF1'
     },
     background: {
       primary: '#88CCCA',
-      secondary: { main: '#FBD38D', light: '#333' },
+      secundary: { main: '#FBD38D', light: '#333' },
+      other: {primary:'#FF3CAC', secundary:'#C71585'},
       nav: 'rgba(37, 37, 37, 0.50)',
-      countdown: 'rgba(255, 255, 255, 0.16)'
+      countdown: 'rgba(255, 255, 255, 0.16)',
+      hover: 'rgba(136, 204, 202, 0.10)'
     },
     link: {
       main: '#FFF'

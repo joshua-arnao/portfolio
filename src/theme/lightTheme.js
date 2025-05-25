@@ -36,17 +36,19 @@ export const lightTheme = createTheme({
       main: '#fff',
       light: '#252525'
     },
-    secondary: { main: '#252525' },
+    secundary: { main: '#252525' },
     text: {
       primary: '#000',
-      secondary: '#fff',
+      secundary: '#fff',
       other: '#333'
     },
     background: {
-      primary: '#88CCCA',
-      secondary: { main: '#333', light: '#FBD38D' },
+      primary: '#73AAA8',
+      secundary: { main: '#333', light: '#FBD38D' },
+      other:{primary:'#C71585', secundary:'#FF3CAC'},
       nav: 'rgba(255, 255, 255, 0.35)',
-      countdown: 'rgba(0, 0, 0, 0.16)'
+      countdown: 'rgba(0, 0, 0, 0.16)',
+      hover: 'rgba(136, 204, 202, 0.10)'
     }
   }
 });
