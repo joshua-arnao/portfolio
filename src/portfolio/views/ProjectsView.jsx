@@ -9,14 +9,14 @@ import { HashLoader } from "react-spinners";
 export const ProjectsView = ({ currentTheme }) => {
   const { projects, loading, error } = useProjects();
   const isSmallScreen = useIsSmallScreen();
-  const {secundary} = currentTheme.palette
+  const {secondary} = currentTheme.palette
 
   if (loading)
     return (
       <Box
         sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap:"16px" }}
       >
-        <HashLoader size={40} color={secundary.main}/>
+        <HashLoader size={40} color={secondary.main}/>
         <Typography>Cargando...</Typography>
       </Box>
     );

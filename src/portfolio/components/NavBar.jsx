@@ -113,7 +113,7 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
             >
               <IconButton
                 aria-label="night"
-                style={{ color: background.secundary.main }}
+                style={{ color: background.secondary.main }}
                 onClick={toggleTheme}
               >
                 {currentTheme === darkTheme ? (
@@ -165,7 +165,7 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
                     value === 0
                       ? {
                           background: background.primary,
-                          color: text.secundary,
+                          color: text.secondary,
                         }
                       : { background: "none", color: text.primary }
                   }
@@ -180,7 +180,7 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
                     value === 1
                       ? {
                           background: background.primary,
-                          color: text.secundary,
+                          color: text.secondary,
                         }
                       : { background: "none", color: text.primary }
                   }
@@ -215,7 +215,7 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
                     value === 0
                       ? {
                           background: background.primary,
-                          color: text.secundary,
+                          color: text.secondary,
                           padding: "0px",
                         }
                       : { background: "none", color: text.primary }
@@ -230,7 +230,7 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
                     value === 1
                       ? {
                           background: background.primary,
-                          color: text.secundary,
+                          color: text.secondary,
                         }
                       : { background: "none", color: text.primary }
                   }
@@ -251,7 +251,7 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
               size="large"
               style={{
                 boxShadow: "none",
-                background: background.secundary.main,
+                background: background.secondary.main,
                 color: primary.main,
                 paddingLeft: "33px",
               }}
