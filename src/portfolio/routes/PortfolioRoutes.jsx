@@ -1,40 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { PortfolioLayout } from '../layout/PortfolioLayout';
 import { DetailProjectsView, HomeView, ProjectsView } from '../views';
 
 export const PortfolioRoutes = ({ toggleTheme, currentTheme }) => {
-  // const routes = [
-  //   {
-  //     path: '/',
-  //     Component: PortfolioLayout,
-
-  //     children: [
-  //       {
-  //         path: '/',
-  //         Component: HomeView
-  //       },
-  //       {
-  //         path: 'projects',
-  //         Component: ProjectsView
-  //         // children: [
-  //         //   {
-  //         //     path: 'projects/:projectId',
-  //         //     Component: DetailProjectsView
-  //         //   }
-  //         // ]
-  //       },
-  //       {
-  //         path: 'projects/:projectId',
-  //         Component: DetailProjectsView
-  //       }
-  //     ]
-  //   }
-  // ];
-
-  // const routeElement = useRoutes(routes);
 
   return (
     <Routes>
+      <Route path="*" element={<Navigate to="/" />} />
       <Route
         path='/'
         element={

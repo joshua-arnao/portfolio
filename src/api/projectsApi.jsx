@@ -11,11 +11,13 @@ export const getProjects = async () => {
   }
 };
 
-export const getProjectById = async (id)=>{
+export const getProjectById = async (projectId)=>{
     try {
-        const response = await fetch(`${BASE_URL}/${id}`)
+        const response = await fetch(`${BASE_URL}/${projectId}`)
         if(!response.ok){
             throw new Error(`Error en la API ${response.status}`)
+            
+            
         }
         return await response.json()
     } catch (error) {
