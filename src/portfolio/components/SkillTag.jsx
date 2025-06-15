@@ -1,29 +1,31 @@
-import { Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Typography } from '@mui/material';
+import { Box } from '@mui/system';
 
 export const SkillTag = ({ uniqueType, currentTheme }) => {
   const { frontend, productdesigner, softskill } = currentTheme.palette;
   const standarUniqueType = uniqueType.toLowerCase();
 
+  console.log(standarUniqueType);
+
   return (
-    <Box display="flex" flexDirection="row" alignItems="center" gap="4px">
+    <Box display='flex' flexDirection='row' alignItems='center' gap='4px'>
       <Box
-        classname="circle"
+        classname='circle'
         style={{
-          width: "5px",
-          height: "5px",
+          width: '5px',
+          height: '5px',
           background:
-            standarUniqueType === "frontend"
+            standarUniqueType === 'tech&tools'
               ? `${frontend.main}`
-              : standarUniqueType === "productdesigner"
+              : standarUniqueType === 'productdesigner'
               ? `${productdesigner.main}`
-              : standarUniqueType === "softskill"
+              : standarUniqueType === 'softskill'
               ? `${softskill.main}`
-              : "none",
-          borderRadius: "50%",
+              : 'none',
+          borderRadius: '50%',
         }}
       ></Box>
-      <Typography variant="caption" component="div">
+      <Typography variant='caption' component='div'>
         {uniqueType}
       </Typography>
     </Box>
