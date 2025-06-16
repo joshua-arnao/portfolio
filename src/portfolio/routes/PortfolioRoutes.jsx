@@ -3,10 +3,8 @@ import { PortfolioLayout } from '../layout/PortfolioLayout';
 import { DetailProjectsView, HomeView, ProjectsView } from '../views';
 
 export const PortfolioRoutes = ({ toggleTheme, currentTheme }) => {
-
   return (
     <Routes>
-      <Route path="*" element={<Navigate to="/" />} />
       <Route
         path='/'
         element={
@@ -16,7 +14,7 @@ export const PortfolioRoutes = ({ toggleTheme, currentTheme }) => {
           />
         }
       >
-        <Route path='/' element={<HomeView currentTheme={currentTheme} />} />
+        <Route index element={<HomeView currentTheme={currentTheme} />} />
         <Route
           path='projects'
           element={<ProjectsView currentTheme={currentTheme} />}
@@ -26,7 +24,7 @@ export const PortfolioRoutes = ({ toggleTheme, currentTheme }) => {
           element={<DetailProjectsView currentTheme={currentTheme} />}
         />
       </Route>
+      <Route path='*' element={<Navigate to='/' />} />
     </Routes>
-    // routeElement
   );
 };
