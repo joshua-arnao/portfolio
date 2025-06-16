@@ -5,8 +5,6 @@ export const SkillTag = ({ uniqueType, currentTheme }) => {
   const { frontend, productdesigner, softskill } = currentTheme.palette;
   const standarUniqueType = uniqueType.toLowerCase();
 
-  console.log(standarUniqueType);
-
   return (
     <Box display='flex' flexDirection='row' alignItems='center' gap='4px'>
       <Box

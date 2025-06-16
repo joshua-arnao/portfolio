@@ -1,12 +1,14 @@
 import { Box, Stack, Typography } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
+import Grid from '@mui/material/Unstable_Grid2';
 import { useState } from 'react';
 import { ChipSkill } from './ChipSkill';
-// import { darkTheme } from '../../theme/darkTheme';
 
 export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
-  const { title, description, imgCard, tools } = project;
+  const { title, description, imgCard, tools, type } = project;
   const [isHover, setIsHover] = useState(false);
+
+  // console.log('type', type);
+  console.log(type.length);
 
   const handleMouseEnter = () => {
     setIsHover(true);
@@ -16,7 +18,8 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
     setIsHover(false);
   };
 
-  const { secondary, background } = currentTheme.palette;
+  const { secondary, background, frontend, productdesigner } =
+    currentTheme.palette;
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -28,27 +31,37 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
         style={
           !isHover
             ? {
-                border: `2px solid ${secondary.main}`,
-                padding: "20px 24px",
-                borderRadius: "20px",
-                transition: "background-color 0.3s ease",
-                textDecoration: "none",
+                border: `2px solid`,
+                borderImage: `
+                
+                linear-gradient(90deg, #ff00cc, #3333ff) 1`,
+                padding: '20px 24px',
+                transition: 'background-color 0.3s ease',
+                textDecoration: 'none',
               }
             : {
                 border: `2px solid ${background.primary}`,
-                padding: "20px 24px",
-                borderRadius: "20px",
-                transition: "background-color 0.3s ease",
+                padding: '20px 24px',
+                transition: 'background-color 0.3s ease',
                 backgroundColor: background.hover,
-                cursor: "pointer",
+                cursor: 'pointer',
               }
         }
       >
-        <Grid sm={6} style={{ height: '192px' }}>
+        <Grid
+          sm={6}
+          style={{
+            position: 'relative',
+          }}
+        >
           <img
             src={imgCard}
             alt='project'
-            style={{ width: '100%', height: '192px', borderRadius: '10px' }}
+            style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: '10px',
+            }}
           />
         </Grid>
 
@@ -61,8 +74,8 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
           justifyContent='space-between'
           id='prueba'
           style={{
-            padding: isSmallScreen ? '' : '0px 0px 0px 16px',
-            textDecoration: "none",
+            padding: isSmallScreen ? '' : '0px 0px 0px 8px',
+            textDecoration: 'none',
           }}
         >
           <Box>
@@ -70,18 +83,18 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
               {title}
             </Typography>
             <Typography variant='body2' component='div' color='secondary'>
-              {description.length > 100
-                ? `${description.slice(0,100)}...`
+              {description.length > 90
+                ? `${description.slice(0, 90)}...`
                 : description}
             </Typography>
           </Box>
 
-          <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
+          <Stack direction='row' spacing={0.5} useFlexGap flexWrap='wrap'>
             {tools.slice(0, 3).map((tool, index) => (
               <ChipSkill key={index} label={tool} currentTheme={currentTheme} />
             ))}
             {tools.length > 3 && (
-              <ChipSkill key="more" label="..." currentTheme={currentTheme} />
+              <ChipSkill key='more' label='...' currentTheme={currentTheme} />
             )}
           </Stack>
         </Grid>

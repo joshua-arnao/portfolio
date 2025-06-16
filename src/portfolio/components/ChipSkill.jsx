@@ -4,8 +4,6 @@ export const ChipSkill = ({ label, colorCategory = '', currentTheme }) => {
   const { frontend, productdesigner, softskill } = currentTheme.palette;
   const standarCategory = colorCategory.toLowerCase();
 
-  console.log('standarCategory', standarCategory);
-
   return (
     <Chip
       label={label}
