@@ -9,9 +9,6 @@ export const getProjects = async () => {
     console.error("Error en getProjects:", error);
     return [];
   }
-<<<<<<< HEAD
-};
-=======
 };
 
 export const getProjectById = async (projectId)=>{
@@ -28,4 +25,3 @@ export const getProjectById = async (projectId)=>{
         return null
     }
 }
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1

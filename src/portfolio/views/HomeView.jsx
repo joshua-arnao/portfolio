@@ -5,70 +5,16 @@ import {
   Container,
   Stack,
   Typography,
-<<<<<<< HEAD
-  Link
-} from '@mui/material';
-import { Timeline } from '@mui/lab';
-import { timelineItemClasses } from '@mui/lab/TimelineItem';
-import { MyTimeLine, ChipSkill } from '../components/index';
-=======
   Link,
 } from '@mui/material';
 import { Timeline } from '@mui/lab';
 import { timelineItemClasses } from '@mui/lab/TimelineItem';
 import { MyTimeLine, ChipSkill, SkillTag } from '../components/index';
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
 
 import PlaceIcon from '@mui/icons-material/Place';
 import CakeIcon from '@mui/icons-material/Cake';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-<<<<<<< HEAD
-
-const skills = [
-  'Product Designer',
-  'Figma',
-  'Adobe XD',
-  'Notion',
-  'Frontend',
-  'React JS',
-  'HTML',
-  'CSS',
-  'Comunicación efectiva',
-  'Bizagi',
-  'Google Analytics',
-  'IA Generativa',
-  'Gestión de proyectos',
-  'Optimización de procesos',
-  'Pensamiento crítico',
-  'Analytics',
-  'Excel',
-  'IA Generativa'
-];
-
-const experiences = [
-  { year: 2016, type: 'work', title: 'Analista de Mejora de proceso' },
-  { year: 2018, type: 'work', title: 'Analista Six Sigma' },
-  { year: 2019, type: 'study', title: 'Curso UX/UI' },
-  { year: 2020, type: 'work', title: 'Analista UX/UI' },
-  {
-    year: 2021,
-    type: 'study',
-    title: 'Especialización UI',
-    link: 'https://medu-certifications.medu.academy/Jr8JsIguhdH61inKXABL'
-  },
-  {
-    year: 2022,
-    type: 'study',
-    title: 'Desarrollo Web Fullstack',
-    link: 'https://academico-cloud.tecsup.edu.pe/pcc/#/home/certificado?c=583348&n=COD%2FCPE%2F22%2F106&t=E'
-  },
-  { year: 2022, type: 'work', title: 'Product Designer' }
-];
-
-export const HomeView = ({ currentTheme }) => {
-  const { text } = currentTheme.palette;
-=======
 import { useSkills } from '../../hook/useSkills';
 import { HashLoader } from 'react-spinners';
 import { useExperiences } from '../../hook/useExperiences';
@@ -93,7 +39,6 @@ export const HomeView = ({ currentTheme }) => {
       </Box>
     );
 
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
   return (
     <Container
       style={{
@@ -103,11 +48,7 @@ export const HomeView = ({ currentTheme }) => {
         border: '1px solid',
         padding: '24px',
         borderRadius: '20px',
-<<<<<<< HEAD
-        gap: '24px'
-=======
         gap: '24px',
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
       }}
     >
       <Box display='flex' flexDirection='column' alignItems='center' gap='16px'>
@@ -130,16 +71,6 @@ export const HomeView = ({ currentTheme }) => {
               Joshua Arnao Canessa
             </Typography>
             <Typography variant='subtitle1' component='div' textAlign='center'>
-<<<<<<< HEAD
-              Ingeniero Industrial
-            </Typography>
-          </Box>
-
-          <Typography component='div' textAlign='justify'>
-            Diseñador de productos digitales con experiencia en metodología
-            Agile, design thinking y CPS.{' '}
-          </Typography>
-=======
               Product Designer & UX Engineer
             </Typography>
           </Box>
@@ -152,16 +83,11 @@ export const HomeView = ({ currentTheme }) => {
             “Diseño estratégico centrado en el usuario.”
           </Typography>
 
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
           <Stack
             direction='row'
             flex
             justifyContent='flex-start'
-<<<<<<< HEAD
-            spacing={0.5}
-=======
             // spacing={0.5}
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
             flexWrap='wrap'
             gap='8px'
             width='100%'
@@ -191,20 +117,6 @@ export const HomeView = ({ currentTheme }) => {
         </Typography>
 
         <Typography component='div' textAlign='justify'>
-<<<<<<< HEAD
-          Soy un apasionado Diseñador de Productos Digitales con un deseo
-          constante de innovar y mejorar. Siempre estoy buscando nuevas formas
-          de combinar la creatividad, la eficiencia y la mejora en la
-          experiencia del usuario.
-          <br />
-          Mi formación en ingeniería industrial y mi amplia experiencia en
-          diseño me han inculcado la importancia de encontrar el equilibrio
-          entre la estética y la funcionalidad. Mi misión es crear experiencias
-          digitales que no solo atraigan visualmente, sino que también
-          solucionen problemas reales. Con un enfoque metódico y una pasión
-          incansable por el aprendizaje, abordo los desafíos con eficacia y
-          desvelo soluciones innovadoras.
-=======
           Soy Product Designer con enfoque estratégico y background en
           desarrollo Frontend y backend. Cuento con más de 5 años de experiencia
           diseñando y desarrollando soluciones digitales escalables y centradas
@@ -231,7 +143,6 @@ export const HomeView = ({ currentTheme }) => {
           Mi enfoque está en la mejora continua, la colaboración
           multidisciplinaria y la entrega de soluciones digitales de alto
           impacto que generen valor real para el negocio y los usuarios.
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
         </Typography>
       </Box>
 
@@ -240,11 +151,6 @@ export const HomeView = ({ currentTheme }) => {
           Skills and Tolls
         </Typography>
 
-<<<<<<< HEAD
-        <Stack direction='row' spacing={1} useFlexGap flexWrap='wrap'>
-          {skills.map((skill, index) => (
-            <ChipSkill key={index} label={skill} currentTheme={currentTheme} />
-=======
         <Stack
           direction='row'
           spacing={1}
@@ -271,7 +177,6 @@ export const HomeView = ({ currentTheme }) => {
               currentTheme={currentTheme}
               colorCategory={skill.type}
             />
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
           ))}
         </Stack>
       </Box>
@@ -285,13 +190,8 @@ export const HomeView = ({ currentTheme }) => {
           sx={{
             [`& .${timelineItemClasses.root}:before`]: {
               flex: 0,
-<<<<<<< HEAD
-              padding: 0
-            }
-=======
               padding: 0,
             },
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
           }}
         >
           {experiences.map((experience, index) => (
@@ -309,12 +209,7 @@ export const HomeView = ({ currentTheme }) => {
           Links
         </Typography>
 
-<<<<<<< HEAD
-        {/* <Stack direction='row' spacing={1} alignItems='center'> */}
-        <Stack direction='row' spacing={1}>
-=======
         <Stack direction='row' spacing={1} alignItems='center'>
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
           <Link
             href='https://pe.linkedin.com/in/joshua-arnao-canessa-832090213'
             target='_blank'

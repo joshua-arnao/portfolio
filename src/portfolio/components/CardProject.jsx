@@ -1,15 +1,4 @@
 import { Box, Stack, Typography } from '@mui/material';
-<<<<<<< HEAD
-import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
-import { useState } from 'react';
-import { ChipSkill } from './ChipSkill';
-import { darkTheme } from '../../theme/darkTheme';
-
-export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
-  const { title, description, imgCard, tools } = project;
-  const [isHover, setIsHover] = useState(false);
-
-=======
 import Grid from '@mui/material/Unstable_Grid2';
 import { useState } from 'react';
 import { ChipSkill } from './ChipSkill';
@@ -21,7 +10,6 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
   // console.log('type', type);
   console.log(type.length);
 
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
   const handleMouseEnter = () => {
     setIsHover(true);
   };
@@ -30,12 +18,9 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
     setIsHover(false);
   };
 
-<<<<<<< HEAD
-=======
   const { secondary, background, frontend, productdesigner } =
     currentTheme.palette;
 
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid
@@ -46,37 +31,6 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
         style={
           !isHover
             ? {
-<<<<<<< HEAD
-                border:
-                  currentTheme === darkTheme
-                    ? '1px solid #fff'
-                    : '1px solid #333',
-                padding: '20px 24px',
-                borderRadius: '20px',
-                transition: 'background-color 0.3s ease'
-              }
-            : {
-                border:
-                  currentTheme === darkTheme
-                    ? '1px solid #fff'
-                    : '1px solid #333',
-                padding: '20px 24px',
-                borderRadius: '20px',
-                transition: 'background-color 0.3s ease',
-                backgroundColor:
-                  currentTheme === darkTheme
-                    ? 'rgb(255, 255, 255, 0.05)'
-                    : 'rgb(0, 0, 0, 0.05)',
-                cursor: 'pointer'
-              }
-        }
-      >
-        <Grid sm={6} style={{ height: '192px' }}>
-          <img
-            src={imgCard}
-            alt='project'
-            style={{ width: '100%', height: '192px', borderRadius: '10px' }}
-=======
                 border: `2px solid`,
                 borderImage: `
                 linear-gradient(45deg, ${frontend.main}, ${productdesigner.main}) 1`,
@@ -110,7 +64,6 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
               height: '100%',
               borderRadius: '10px',
             }}
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
           />
         </Grid>
 
@@ -123,13 +76,9 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
           justifyContent='space-between'
           id='prueba'
           style={{
-<<<<<<< HEAD
-            padding: isSmallScreen ? '' : '0px 0px 0px 16px'
-=======
             padding: isSmallScreen ? '' : '0px 0px 0px 8px',
             textDecoration: 'none',
             width: '100%',
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
           }}
         >
           <Box>
@@ -137,16 +86,6 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
               {title}
             </Typography>
             <Typography variant='body2' component='div' color='secondary'>
-<<<<<<< HEAD
-              {description}
-            </Typography>
-          </Box>
-
-          <Stack direction='row' spacing={1} useFlexGap flexWrap='wrap'>
-            {tools.map((tool, index) => (
-              <ChipSkill key={index} label={tool} currentTheme={currentTheme} />
-            ))}
-=======
               {description.length > 90
                 ? `${description.slice(0, 90)}...`
                 : description}
@@ -160,7 +99,6 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
             {tools.length > 3 && (
               <ChipSkill key='more' label='...' currentTheme={currentTheme} />
             )}
->>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
           </Stack>
         </Grid>
       </Grid>
