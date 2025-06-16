@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
+<<<<<<< HEAD
     "@emotion/styled": "^11.14.0",
+=======
+    "@emotion/styled": "^11.11.0",
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
     "@mui/icons-material": "^5.14.11",
     "@mui/lab": "^5.0.0-alpha.149",
     "@mui/material": "^5.14.11",
@@ -21,6 +25,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.0",
+<<<<<<< HEAD
+=======
+    "react-spinners": "^0.17.0",
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
     "styled-components": "^5.3.11",
     "vercel": "^33.7.0"
   },
@@ -33,6 +41,10 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+<<<<<<< HEAD
     "vite": "^6.3.5"
+=======
+    "vite": "^4.4.5"
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
   }
 }

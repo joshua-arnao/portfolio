@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import AppBar from '@mui/material/AppBar';
 // import Box from '@mui/material/Box';
 // import Toolbar from '@mui/material/Toolbar';
@@ -126,6 +127,9 @@
 // };
 
 import { useEffect, useState } from 'react';
+=======
+import { useEffect, useState } from "react";
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
 import {
   AppBar,
   Avatar,
@@ -138,6 +142,7 @@ import {
   Menu,
   MenuItem,
   Toolbar,
+<<<<<<< HEAD
   Typography
 } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
@@ -148,6 +153,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { darkTheme } from '../../theme';
+=======
+  Typography,
+} from "@mui/material";
+import { Link, useLocation } from "react-router-dom";
+
+import { useIsSmallScreen } from "../../hook/useSmallScreen";
+
+import MenuIcon from "@mui/icons-material/Menu";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { darkTheme } from "../../theme";
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
 
 export const NavBar = ({ toggleTheme, currentTheme }) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -156,16 +173,27 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
 
   useEffect(() => {
     // Almacena el valor de la página actual en el almacenamiento local
+<<<<<<< HEAD
     localStorage.setItem('navBarValue', value);
+=======
+    localStorage.setItem("navBarValue", value);
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
   }, [value]);
 
   useEffect(() => {
     // Cuando la ubicación cambie, actualiza el valor basado en la ruta actual
     switch (true) {
+<<<<<<< HEAD
       case location.pathname === '/':
         setValue(0);
         break;
       case location.pathname.startsWith('/projects'):
+=======
+      case location.pathname === "/":
+        setValue(0);
+        break;
+      case location.pathname.startsWith("/projects"):
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
         setValue(1);
         break;
       default:
@@ -191,6 +219,7 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
   return (
     <Box
       sx={{ flexGrow: 1 }}
+<<<<<<< HEAD
       position='fixed'
       style={{ width: '100%', zIndex: '2' }}
     >
@@ -201,18 +230,37 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
           background: background.nav,
           backdropFilter: 'blur(8px)',
           alignItems: 'center'
+=======
+      position="fixed"
+      style={{ width: "100%", zIndex: "2" }}
+    >
+      <AppBar
+        position="static"
+        style={{
+          boxShadow: "none",
+          background: background.nav,
+          backdropFilter: "blur(8px)",
+          alignItems: "center",
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
         }}
       >
         <Toolbar
           disableGutters
           style={{
+<<<<<<< HEAD
             width: isSmallScreen ? '100%' : '600px',
             display: 'flex',
             padding: '0px 8px'
+=======
+            width: isSmallScreen ? "100%" : "600px",
+            display: "flex",
+            padding: "0px 8px",
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
           }}
         >
           <Container
             style={{
+<<<<<<< HEAD
               display: 'flex',
               alignItems: 'center',
               gap: '24px',
@@ -226,6 +274,21 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
                 sx={{ width: 24, height: 24 }}
               />
               <Typography variant='h1' component='div'>
+=======
+              display: "flex",
+              alignItems: "center",
+              gap: "24px",
+              margin: "0px",
+              padding: "0px",
+            }}
+          >
+            <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <Avatar
+                src="/assets/photos/logojac.png"
+                sx={{ width: 24, height: 24 }}
+              />
+              <Typography variant="h1" component="div">
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                 Joshua Arnao C.
               </Typography>
             </Box>
@@ -234,12 +297,21 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
             <Box
               sx={{
                 flexGrow: 1,
+<<<<<<< HEAD
                 display: { xs: 'flex', md: 'none' },
                 justifyContent: 'flex-end'
               }}
             >
               <IconButton
                 aria-label='night'
+=======
+                display: { xs: "flex", md: "none" },
+                justifyContent: "flex-end",
+              }}
+            >
+              <IconButton
+                aria-label="night"
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                 style={{ color: background.secondary.main }}
                 onClick={toggleTheme}
               >
@@ -251,16 +323,26 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
               </IconButton>
 
               <IconButton
+<<<<<<< HEAD
                 size='large'
                 aria-label='account of current user'
                 aria-controls='menu-appbar'
                 aria-haspopup='true'
                 onClick={handleOpenNavMenu}
                 color='inherit'
+=======
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
               >
                 <MenuIcon />
               </IconButton>
               <Menu
+<<<<<<< HEAD
                 id='menu-appbar'
                 anchorEl={anchorElNav}
                 anchorOrigin={{
@@ -271,43 +353,85 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
                 transformOrigin={{
                   vertical: 'top',
                   horizontal: 'left'
+=======
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
+<<<<<<< HEAD
                   display: { xs: 'block', md: 'none' },
                   '& .MuiPaper-root': {
                     // Estilo para el contenedor del menú desplegable
                     background: primary.main // Cambia el color del fondo del menú desplegable
                   }
+=======
+                  display: { xs: "block", md: "none" },
+                  "& .MuiPaper-root": {
+                    // Estilo para el contenedor del menú desplegable
+                    background: primary.main, // Cambia el color del fondo del menú desplegable
+                    
+                  },
+                  
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                 }}
               >
                 <MenuItem
                   component={Link}
+<<<<<<< HEAD
                   to='/'
+=======
+                  to="/"
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                   onClick={handleCloseNavMenu}
                   style={
                     value === 0
                       ? {
                           background: background.primary,
+<<<<<<< HEAD
                           color: text.secondary
                         }
                       : { background: 'none', color: text.primary }
+=======
+                          color: text.secondary,
+                        }
+                      : { background: "none", color: text.primary }
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                   }
                 >
                   About
                 </MenuItem>
                 <MenuItem
                   component={Link}
+<<<<<<< HEAD
                   to='/projects'
+=======
+                  to="/projects"
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                   onClick={handleCloseNavMenu}
                   style={
                     value === 1
                       ? {
                           background: background.primary,
+<<<<<<< HEAD
                           color: text.secondary
                         }
                       : { background: 'none', color: text.primary }
+=======
+                          color: text.secondary,
+                        }
+                      : { background: "none", color: text.primary }
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                   }
                 >
                   Projects
@@ -319,8 +443,13 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
             <Box
               sx={{
                 flexGrow: 1,
+<<<<<<< HEAD
                 display: { xs: 'none', md: 'flex' },
                 width: '300px'
+=======
+                display: { xs: "none", md: "flex" },
+                width: "300px",
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
               }}
             >
               <BottomNavigation
@@ -329,6 +458,7 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
                   setValue(newValue);
                 }}
                 style={{
+<<<<<<< HEAD
                   background: 'none',
                   display: 'flex',
                   justifyContent: 'flex-start'
@@ -336,11 +466,21 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
               >
                 <BottomNavigationAction
                   label='About'
+=======
+                  background: "none",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                }}
+              >
+                <BottomNavigationAction
+                  label="About"
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                   style={
                     value === 0
                       ? {
                           background: background.primary,
                           color: text.secondary,
+<<<<<<< HEAD
                           padding: '0px'
                         }
                       : { background: 'none', color: text.primary }
@@ -351,16 +491,37 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
 
                 <BottomNavigationAction
                   label='Projects'
+=======
+                          padding: "0px",
+                        }
+                      : { background: "none", color: text.primary }
+                  }
+                  component={Link}
+                  to="/"
+                />
+
+                <BottomNavigationAction
+                  label="Projects"
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                   style={
                     value === 1
                       ? {
                           background: background.primary,
+<<<<<<< HEAD
                           color: text.secondary
                         }
                       : { background: 'none', color: text.primary }
                   }
                   component={Link}
                   to='/projects'
+=======
+                          color: text.secondary,
+                        }
+                      : { background: "none", color: text.primary }
+                  }
+                  component={Link}
+                  to="/projects"
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                 />
               </BottomNavigation>
             </Box>
@@ -368,6 +529,7 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
           <Box
             sx={{
               flexGrow: 1,
+<<<<<<< HEAD
               display: { xs: 'none', md: 'flex' }
             }}
           >
@@ -379,14 +541,34 @@ export const NavBar = ({ toggleTheme, currentTheme }) => {
                 background: background.secondary.main,
                 color: primary.main,
                 paddingLeft: '33px'
+=======
+              display: { xs: "none", md: "flex" },
+            }}
+          >
+            <Button
+              variant="contained"
+              size="large"
+              style={{
+                boxShadow: "none",
+                background: background.secondary.main,
+                color: primary.main,
+                paddingLeft: "33px",
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
               }}
               startIcon={
                 currentTheme === darkTheme ? (
                   <LightModeIcon
+<<<<<<< HEAD
                     style={{ width: '24px', marginRight: '0px' }}
                   />
                 ) : (
                   <DarkModeIcon style={{ width: '24px', marginRight: '0px' }} />
+=======
+                    style={{ width: "24px", marginRight: "0px" }}
+                  />
+                ) : (
+                  <DarkModeIcon style={{ width: "24px", marginRight: "0px" }} />
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                 )
               }
               onClick={toggleTheme}

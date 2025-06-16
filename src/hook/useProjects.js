@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
 import { useEffect, useState } from "react";
 import { getProjects } from "../api/projectsApi";
 
@@ -20,6 +23,7 @@ export const useProjects = () => {
             } finally {
                 setLoading(false)
             }
+<<<<<<< HEAD
         }
 
         fetchProjects()
@@ -30,3 +34,13 @@ export const useProjects = () => {
     <div>useProjects</div>
   )
 }
+=======
+        };
+
+        fetchProjects()
+    }, []);
+
+  return{projects, loading, error}
+}
+
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1

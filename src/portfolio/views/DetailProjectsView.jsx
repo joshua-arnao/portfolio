@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
 import {
   Box,
   Breadcrumbs,
@@ -7,6 +11,7 @@ import {
   ListItemIcon,
   ListItemText,
   Stack,
+<<<<<<< HEAD
   Typography
 } from '@mui/material';
 import { Link as Linked } from '@mui/material';
@@ -223,6 +228,55 @@ export const DetailProjectsView = ({ currentTheme }) => {
   const { tools } = project;
 
   const { primary, background } = currentTheme.palette;
+=======
+  Typography,
+} from '@mui/material';
+import { Link as Linked } from '@mui/material';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import CheckIcon from '@mui/icons-material/Check';
+import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
+import { darkTheme } from '../../theme';
+import { ChipSkill } from '../components/ChipSkill';
+import LinkIcon from '@mui/icons-material/Link';
+import { useProjectsId } from '../../hook/useProjectsId';
+import { HashLoader } from 'react-spinners';
+
+export const DetailProjectsView = ({ currentTheme }) => {
+  const { projects, loading, error } = useProjectsId();
+  const { primary, background, secondary } = currentTheme.palette;
+
+  if (loading)
+    return (
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '16px',
+        }}
+      >
+        <HashLoader size={40} color={secondary.main} />
+        <Typography>Cargando...</Typography>
+      </Box>
+    );
+
+  if (error) {
+    return <Typography color='error'>{error}</Typography>;
+  }
+
+  const {
+    tools,
+    title,
+    description,
+    link,
+    rol,
+    problem,
+    understanding,
+    breacking,
+    overall,
+    conclusions,
+  } = projects;
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
 
   const breadcrumbs = [
     <Link to='/projects' key='1' style={{ textDecoration: 'none' }}>
@@ -234,17 +288,36 @@ export const DetailProjectsView = ({ currentTheme }) => {
       </Linked>
     </Link>,
     <Typography key='3' color={background.primary}>
+<<<<<<< HEAD
       {project.title}
     </Typography>
   ];
 
+=======
+      {title}
+    </Typography>,
+  ];
+
+  const getLinkText = (link) => {
+    if (link.includes('github')) {
+      return 'Ver el reposotorio';
+    }
+
+    return 'Ver el proyecto';
+  };
+
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
   return (
     <Container
       style={{
         display: 'flex',
         flexDirection: 'column',
         gap: '24px',
+<<<<<<< HEAD
         width: '100%'
+=======
+        width: '100%',
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
       }}
     >
       <Breadcrumbs
@@ -255,7 +328,11 @@ export const DetailProjectsView = ({ currentTheme }) => {
         {breadcrumbs}
       </Breadcrumbs>
       <Typography variant='h2' component='div'>
+<<<<<<< HEAD
         {project.title}
+=======
+        {title}
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
       </Typography>
 
       <Stack direction='row' spacing={1} useFlexGap flexWrap='wrap'>
@@ -264,6 +341,7 @@ export const DetailProjectsView = ({ currentTheme }) => {
         ))}
       </Stack>
 
+<<<<<<< HEAD
       <Box>
         {project.link.map((link, index)=>(
           <Box key={index} style={{display:'flex', alignItems:'center', gap:'8px'}}>
@@ -277,13 +355,68 @@ export const DetailProjectsView = ({ currentTheme }) => {
       </Box>
 
 
+=======
+      <Box
+        style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}
+        background='#000'
+      >
+        {link.map((link, index) => (
+          <Box
+            key={index}
+            style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                height: '22px',
+                padding: '1px 8px',
+                borderRadius: '6px',
+                background: 'rgba(154, 230, 180, 0.16)',
+              }}
+            >
+              <p
+                style={{
+                  fontSize: '12px',
+                  color: '#9AE6B4',
+                  fontFamily: 'Inter',
+                  lineHeight: '20px',
+                }}
+              >
+                Link
+              </p>
+            </div>
+            <Linked
+              href={link}
+              target='_blank'
+              color={background.other.primary}
+              fontSize='14px'
+              sx={{
+                '&:hover': {
+                  color: background.other.secundary,
+                  textDecoration: 'underline',
+                },
+              }}
+            >
+              {getLinkText(link)}{' '}
+              <LinkIcon color={background.other.primary} fontSize='14px' />
+            </Linked>
+          </Box>
+        ))}
+      </Box>
+
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
       <Box width='100%' display='flex' flexDirection='column' gap='16px'>
         <Typography variant='subtitle1' component='div' width='100%'>
           Descripción General
         </Typography>
 
         <Typography component='div'>
+<<<<<<< HEAD
           {project.description.split('\n\n').map((paragraph, index) => (
+=======
+          {description.split('\n\n').map((paragraph, index) => (
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
             <p key={index}>{paragraph}</p>
           ))}
         </Typography>
@@ -296,7 +429,11 @@ export const DetailProjectsView = ({ currentTheme }) => {
 
         <Typography component='div'>
           <List>
+<<<<<<< HEAD
             {/* {Object.values(project.rol).map((rol, index) => (
+=======
+            {/* {Object.values(rol).map((rol, index) => (
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
               <ListItem key={index}>
                 <ListItemIcon>
                   <CheckIcon style={{ color: '#fff' }} />
@@ -305,7 +442,11 @@ export const DetailProjectsView = ({ currentTheme }) => {
               </ListItem>
             ))} */}
 
+<<<<<<< HEAD
             {project.rol.map((rols, index) => (
+=======
+            {rol.map((rols, index) => (
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
               <ListItem key={index}>
                 <ListItemIcon>
                   <CheckIcon style={{ color: primary }} />
@@ -317,6 +458,7 @@ export const DetailProjectsView = ({ currentTheme }) => {
         </Typography>
       </Box>
 
+<<<<<<< HEAD
       <Box width='100%' display='flex' flexDirection='column' gap='16px'>
         <Typography variant='subtitle1' component='div' width='100%'>
           Problematica y solución
@@ -328,6 +470,21 @@ export const DetailProjectsView = ({ currentTheme }) => {
           <List>
             {Object.values(project.problem.pareto).map(
               (functionalities, index) => (
+=======
+      {problem.description === '' ? (
+        ''
+      ) : (
+        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+          <Typography variant='subtitle1' component='div' width='100%'>
+            Problematica y solución
+          </Typography>
+
+          <Typography component='div'>
+            {problem.description}
+            {'\n\n'}
+            <List>
+              {Object.values(problem.pareto).map((functionalities, index) => (
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
                 <ListItem key={index}>
                   <ListItemIcon>
                     <HorizontalRuleIcon
@@ -337,6 +494,7 @@ export const DetailProjectsView = ({ currentTheme }) => {
                   </ListItemIcon>
                   <ListItemText primary={functionalities} />
                 </ListItem>
+<<<<<<< HEAD
               )
             )}
           </List>
@@ -464,6 +622,149 @@ export const DetailProjectsView = ({ currentTheme }) => {
           ))}
         </Box>
       </Box>
+=======
+              ))}
+            </List>
+          </Typography>
+        </Box>
+      )}
+
+      {understanding.description === '' ? (
+        ''
+      ) : (
+        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+          <Typography variant='subtitle1' component='div' width='100%'>
+            Entendimiento
+          </Typography>
+
+          <Typography component='div'>
+            {understanding.description}
+            {'\n\n'}
+            <List>
+              {Object.values(understanding.list).map((pareto, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <HorizontalRuleIcon
+                      fontSize='small'
+                      style={{ color: primary }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary={pareto} />
+                </ListItem>
+              ))}
+            </List>
+          </Typography>
+
+          <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+            {Object.values(understanding.images).map((image, index) => (
+              <img key={index} src={image} />
+            ))}
+          </Box>
+        </Box>
+      )}
+
+      {breacking.description === '' ? (
+        ''
+      ) : (
+        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+          <Typography variant='subtitle1' component='div' width='100%'>
+            Desglosando el problema
+          </Typography>
+
+          <Typography component='div'>
+            {breacking.description}
+            {'\n\n'}
+            <List>
+              {Object.values(breacking.list).map((pareto, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <HorizontalRuleIcon
+                      fontSize='small'
+                      style={{ color: primary }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary={pareto} />
+                </ListItem>
+              ))}
+            </List>
+          </Typography>
+
+          <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+            {Object.values(breacking.images).map((image, index) => (
+              <img key={index} src={image} />
+            ))}
+          </Box>
+        </Box>
+      )}
+
+      {overall.description === '' ? (
+        ''
+      ) : (
+        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+          <Typography variant='subtitle1' component='div' width='100%'>
+            Resultados generales
+          </Typography>
+
+          <Typography component='div'>
+            {overall.description}
+            {'\n\n'}
+            <List>
+              {Object.values(overall.list).map((pareto, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <HorizontalRuleIcon
+                      fontSize='small'
+                      style={{ color: primary }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary={pareto} />
+                </ListItem>
+              ))}
+            </List>
+          </Typography>
+
+          <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+            {Object.values(overall.images).map((image, index) => (
+              <img key={index} src={image} />
+            ))}
+          </Box>
+        </Box>
+      )}
+
+      {conclusions.description === '' ? (
+        ''
+      ) : (
+        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+          <Typography variant='subtitle1' component='div' width='100%'>
+            Conclusiones
+          </Typography>
+
+          <Typography component='div'>
+            {conclusions.description}
+            {'\n\n'}
+            <List>
+              {Object.values(conclusions.list).map((pareto, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <HorizontalRuleIcon
+                      fontSize='small'
+                      style={{ color: primary }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary={pareto} />
+                </ListItem>
+              ))}
+            </List>
+          </Typography>
+
+          <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+            {Object.values(conclusions.images).map((image, index) => (
+              <img key={index} src={image} />
+            ))}
+          </Box>
+        </Box>
+      )}
+>>>>>>> 41833012a4effe04dfd3fc7274f97d2b3fd83fc1
     </Container>
   );
 };
