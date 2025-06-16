@@ -255,96 +255,107 @@ export const DetailProjectsView = ({ currentTheme }) => {
         </Box>
       )}
 
-      {breacking.lenght > 0 ? 'none' : <p>si</p>}
-      <Box width='100%' display='flex' flexDirection='column' gap='16px'>
-        <Typography variant='subtitle1' component='div' width='100%'>
-          Desglosando el problema
-        </Typography>
-
-        <Typography component='div'>
-          {breacking.description}
-          {'\n\n'}
-          <List>
-            {Object.values(breacking.list).map((pareto, index) => (
-              <ListItem key={index}>
-                <ListItemIcon>
-                  <HorizontalRuleIcon
-                    fontSize='small'
-                    style={{ color: primary }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary={pareto} />
-              </ListItem>
-            ))}
-          </List>
-        </Typography>
-
+      {breacking.description === '' ? (
+        ''
+      ) : (
         <Box width='100%' display='flex' flexDirection='column' gap='16px'>
-          {Object.values(breacking.images).map((image, index) => (
-            <img key={index} src={image} />
-          ))}
-        </Box>
-      </Box>
+          <Typography variant='subtitle1' component='div' width='100%'>
+            Desglosando el problema
+          </Typography>
 
-      <Box width='100%' display='flex' flexDirection='column' gap='16px'>
-        <Typography variant='subtitle1' component='div' width='100%'>
-          Resultados generales
-        </Typography>
+          <Typography component='div'>
+            {breacking.description}
+            {'\n\n'}
+            <List>
+              {Object.values(breacking.list).map((pareto, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <HorizontalRuleIcon
+                      fontSize='small'
+                      style={{ color: primary }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary={pareto} />
+                </ListItem>
+              ))}
+            </List>
+          </Typography>
 
-        <Typography component='div'>
-          {overall.description}
-          {'\n\n'}
-          <List>
-            {Object.values(overall.list).map((pareto, index) => (
-              <ListItem key={index}>
-                <ListItemIcon>
-                  <HorizontalRuleIcon
-                    fontSize='small'
-                    style={{ color: primary }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary={pareto} />
-              </ListItem>
+          <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+            {Object.values(breacking.images).map((image, index) => (
+              <img key={index} src={image} />
             ))}
-          </List>
-        </Typography>
-
-        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
-          {Object.values(overall.images).map((image, index) => (
-            <img key={index} src={image} />
-          ))}
+          </Box>
         </Box>
-      </Box>
+      )}
 
-      <Box width='100%' display='flex' flexDirection='column' gap='16px'>
-        <Typography variant='subtitle1' component='div' width='100%'>
-          Conclusiones
-        </Typography>
+      {overall.description === '' ? (
+        ''
+      ) : (
+        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+          <Typography variant='subtitle1' component='div' width='100%'>
+            Resultados generales
+          </Typography>
 
-        <Typography component='div'>
-          {conclusions.description}
-          {'\n\n'}
-          <List>
-            {Object.values(conclusions.list).map((pareto, index) => (
-              <ListItem key={index}>
-                <ListItemIcon>
-                  <HorizontalRuleIcon
-                    fontSize='small'
-                    style={{ color: primary }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary={pareto} />
-              </ListItem>
+          <Typography component='div'>
+            {overall.description}
+            {'\n\n'}
+            <List>
+              {Object.values(overall.list).map((pareto, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <HorizontalRuleIcon
+                      fontSize='small'
+                      style={{ color: primary }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary={pareto} />
+                </ListItem>
+              ))}
+            </List>
+          </Typography>
+
+          <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+            {Object.values(overall.images).map((image, index) => (
+              <img key={index} src={image} />
             ))}
-          </List>
-        </Typography>
-
-        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
-          {Object.values(conclusions.images).map((image, index) => (
-            <img key={index} src={image} />
-          ))}
+          </Box>
         </Box>
-      </Box>
+      )}
+
+      {conclusions.description === '' ? (
+        ''
+      ) : (
+        <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+          <Typography variant='subtitle1' component='div' width='100%'>
+            Conclusiones
+          </Typography>
+
+          <Typography component='div'>
+            {conclusions.description}
+            {'\n\n'}
+            <List>
+              {Object.values(conclusions.list).map((pareto, index) => (
+                <ListItem key={index}>
+                  <ListItemIcon>
+                    <HorizontalRuleIcon
+                      fontSize='small'
+                      style={{ color: primary }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary={pareto} />
+                </ListItem>
+              ))}
+            </List>
+          </Typography>
+
+          <Box width='100%' display='flex' flexDirection='column' gap='16px'>
+            {Object.values(conclusions.images).map((image, index) => (
+              <img key={index} src={image} />
+            ))}
+          </Box>
+        </Box>
+      )}
     </Container>
   );
 };

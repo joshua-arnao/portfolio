@@ -33,11 +33,11 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
             ? {
                 border: `2px solid`,
                 borderImage: `
-                
-                linear-gradient(90deg, #ff00cc, #3333ff) 1`,
+                linear-gradient(45deg, ${frontend.main}, ${productdesigner.main}) 1`,
                 padding: '20px 24px',
                 transition: 'background-color 0.3s ease',
                 textDecoration: 'none',
+                width: '328px',
               }
             : {
                 border: `2px solid ${background.primary}`,
@@ -45,6 +45,7 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
                 transition: 'background-color 0.3s ease',
                 backgroundColor: background.hover,
                 cursor: 'pointer',
+                width: '328px',
               }
         }
       >
@@ -52,13 +53,14 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
           sm={6}
           style={{
             position: 'relative',
+            width: '276px',
           }}
         >
           <img
             src={imgCard}
             alt='project'
             style={{
-              width: '100%',
+              width: '276px',
               height: '100%',
               borderRadius: '10px',
             }}
@@ -76,6 +78,7 @@ export const CardProject = ({ project, isSmallScreen, currentTheme }) => {
           style={{
             padding: isSmallScreen ? '' : '0px 0px 0px 8px',
             textDecoration: 'none',
+            width: '100%',
           }}
         >
           <Box>
