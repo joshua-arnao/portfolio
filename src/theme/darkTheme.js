@@ -10,19 +10,19 @@ export const darkTheme = createTheme({
       lineHeight: 1.25,
     },
     h2: {
-      fontSize: '34px',
+      fontSize: '28px',
       fontFamily: 'Nunito, sans-serif',
       fontWeight: 700,
-      lineHeight: 1.25,
+      lineHeight: 1.2,
     },
     h3: {
-      fontSize: '24px',
+      fontSize: '22px',
       fontFamily: 'Nunito, sans-serif',
       fontWeight: 700,
       lineHeight: 1.25,
     },
     subtitle1: {
-      fontSize: '12px',
+      fontSize: '11px',
       fontWeight: 500,
       lineHeight: 1.6,
       letterSpacing: 1.2,
@@ -39,35 +39,49 @@ export const darkTheme = createTheme({
 
   palette: {
     mode: 'dark',
-    primary: {
-      main: '#252525',
-      light: '#252525',
-    },
-    secondary: { main: '#FFF' },
+    primary: { main: '#121212' },
+    secondary: { main: '#FBD38D' },
     text: {
-      primary: '#FFF',
-      secondary: '#000',
-      other: '#FFFFF1',
+      primary: '#FFFFFF',
+      secondary: '#888888',
+      tertiary: '#555555',
     },
     background: {
-      primary: '#88CCCA',
-      secondary: { main: '#FBD38D', light: '#333' },
-      other: { primary: '#FF3CAC', secondary: '#C71585' },
-      nav: 'rgba(37, 37, 37, 0.50)',
-      countdown: 'rgba(255, 255, 255, 0.16)',
-      hover: 'rgba(136, 204, 202, 0.10)',
+      default: '#121212',
+      paper: '#1a1a1a',
+      surface: '#1e1e1e',
+      nav: 'rgba(18, 18, 18, 0.85)',
+      hover: 'rgba(255,255,255,0.04)',
     },
-    link: {
-      main: '#FFF',
+    // Sistema de etapas
+    stage: {
+      java: {
+        main: '#378ADD',
+        light: '#85B7EB',
+        bg: '#0c1a2e',
+        border: '#185FA5',
+      },
+      ux: {
+        main: '#5DCAA5',
+        light: '#9FE1CB',
+        bg: '#0d1f1a',
+        border: '#1D9E75',
+      },
+      designer: {
+        main: '#7F77DD',
+        light: '#AFA9EC',
+        bg: '#16102e',
+        border: '#534AB7',
+      },
     },
-    frontend: {
-      main: '#F24E1E',
+    divider: '#222222',
+    border: {
+      primary: '#333333',
+      secondary: '#2a2a2a',
     },
-    productdesigner: {
-      main: '#8B5CF6',
-    },
-    softskill: {
-      main: '#10B981',
+    accent: {
+      amber: '#FBD38D',
+      teal: '#5DCAA5',
     },
   },
 });

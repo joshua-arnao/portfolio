@@ -1,24 +1,35 @@
-import CssBaseline from '@mui/material/CssBaseline';
-import { Box } from '@mui/material';
+import { Box, CssBaseline } from '@mui/material';
 import { AppTheme, darkTheme, lightTheme } from './theme';
 import { PortfolioRoutes } from './portfolio/routes/PortfolioRoutes';
 import { useEffect, useState } from 'react';
+import { wakeUpServer } from './api/projectsApi';
+
+const PING_INTERVAL = 10 * 60 * 1000;
 
 export const PortfolioApp = () => {
   const [currentTheme, setCurrentTheme] = useState(darkTheme);
 
   useEffect(() => {
+    wakeUpServer();
+
+    const interval = setInterval(() => {
+      wakeUpServer();
+    }, PING_INTERVAL);
+
     const storedTheme = localStorage.getItem('preferredTheme');
     if (storedTheme) {
       setCurrentTheme(storedTheme === 'light' ? lightTheme : darkTheme);
     }
+
+    return () => clearInterval(interval);
   }, []);
 
   const toggleTheme = () => {
-    setCurrentTheme(currentTheme === darkTheme ? lightTheme : darkTheme);
+    const next = currentTheme === darkTheme ? lightTheme : darkTheme;
+    setCurrentTheme(next);
     localStorage.setItem(
       'preferredTheme',
-      currentTheme === darkTheme ? 'light' : 'dark'
+      next === darkTheme ? 'dark' : 'light',
     );
   };
 
@@ -28,8 +39,8 @@ export const PortfolioApp = () => {
       <Box
         sx={{
           minHeight: '100vh',
-          backgroundColor: 'primary.main',
-          color: 'secondary.main'
+          backgroundColor: currentTheme.palette.background.default,
+          color: currentTheme.palette.text.primary,
         }}
       >
         <PortfolioRoutes

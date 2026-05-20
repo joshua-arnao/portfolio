@@ -8,18 +8,26 @@ export const PortfolioLayout = ({ toggleTheme, currentTheme }) => {
 
   return (
     <Box
-      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        background: currentTheme.palette.background.default,
+        minHeight: '100vh',
+      }}
     >
       <NavBar toggleTheme={toggleTheme} currentTheme={currentTheme} />
 
       <Box
         component='main'
         style={{
-          margin: '100px 0px ',
-          width: isSmallScreen ? '360px' : '533px' // Ajusta el ancho según el tamaño de la pantalla
+          marginTop: '80px',
+          marginBottom: '60px',
+          width: '100%',
+          maxWidth: isSmallScreen ? '100%' : '600px',
+          padding: isSmallScreen ? '0 16px' : '0 24px',
         }}
       >
-        {/* {children} */}
         <Outlet currentTheme={currentTheme} />
       </Box>
     </Box>
