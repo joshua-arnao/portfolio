@@ -73,6 +73,18 @@ export const darkTheme = createTheme({
         bg: '#16102e',
         border: '#534AB7',
       },
+      softskill: {
+        main: '#E8A838',
+        light: '#F5CC7F',
+        bg: '#2a1f0a',
+        border: '#8C6420',
+      },
+      ai: {
+        main: '#F97316',
+        light: '#FED7AA',
+        bg: '#2a1500',
+        border: '#C2410C',
+      },
     },
     divider: '#222222',
     border: {

@@ -28,16 +28,22 @@ export const DetailProjectsView = ({ currentTheme }) => {
 
   const getStageColor = (type) => {
     const t = type?.toLowerCase();
-    if (t === 'tech&tools') return stage.java;
+    if (t === 'backend') return stage.java;
+    if (t === 'fullstack') return stage.ux;
+    if (t === 'ai') return stage.ai;
+    if (t === 'frontend') return stage.softskill;
     if (t === 'productdesigner') return stage.designer;
-    return stage.ux;
+    return stage.java;
   };
 
   const getStageName = (type) => {
     const t = type?.toLowerCase();
-    if (t === 'tech&tools') return 'Java Developer';
+    if (t === 'backend') return 'Backend';
+    if (t === 'fullstack') return 'Fullstack';
+    if (t === 'ai') return 'AI & Agents';
+    if (t === 'frontend') return 'Frontend';
     if (t === 'productdesigner') return 'Product Designer';
-    return 'UX Engineer';
+    return type;
   };
 
   const getLinkIcon = (link) => {

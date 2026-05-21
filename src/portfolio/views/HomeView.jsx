@@ -27,15 +27,15 @@ export const HomeView = ({ currentTheme }) => {
   const getStageColor = (type) => {
     const t = type?.toLowerCase();
     if (t === 'tech&tools') return stage.java;
-    if (t === 'productdesigner') return stage.designer;
-    if (t === 'softskill') return stage.ux;
+    if (t === 'ai') return stage.ai;
     if (t === 'frontend') return stage.ux;
+    if (t === 'productdesigner') return stage.designer;
+    if (t === 'softskill') return stage.softskill;
     return stage.java;
   };
 
   return (
     <Container style={{ padding: '0px' }}>
-      {/* ── HERO ── */}
       <Box
         style={{
           display: 'flex',
@@ -46,7 +46,6 @@ export const HomeView = ({ currentTheme }) => {
           marginBottom: '28px',
         }}
       >
-        {/* Available badge */}
         <Box style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
           <span
             style={{
@@ -91,12 +90,11 @@ export const HomeView = ({ currentTheme }) => {
                 fontFamily: 'Inter, sans-serif',
               }}
             >
-              Java Backend Developer · AI Engineering
+              Java Backend Developer · AI Engineer
             </Typography>
           </Box>
         </Box>
 
-        {/* Bio */}
         <Typography
           style={{
             fontSize: '13px',
@@ -110,7 +108,6 @@ export const HomeView = ({ currentTheme }) => {
           antes de escribir la primera línea de código.
         </Typography>
 
-        {/* Contact chips */}
         <Stack direction='row' flexWrap='wrap' gap='8px'>
           <Chip
             icon={<EmailIcon style={{ fontSize: '14px' }} />}
@@ -136,25 +133,27 @@ export const HomeView = ({ currentTheme }) => {
           />
         </Stack>
 
-        {/* Social links */}
-        <Stack direction='row' gap='8px' alignItems='center'>
+        <Stack direction='row' gap='8px' alignItems='center' flexWrap='wrap'>
           <Link
             href='https://pe.linkedin.com/in/joshua-arnao-canessa-832090213'
             target='_blank'
             rel='noopener'
             style={{
-              display: 'flex',
+              display: 'inline-flex',
               alignItems: 'center',
-              gap: '5px',
+              gap: '6px',
               fontSize: '12px',
-              color: text.secondary,
+              fontWeight: 500,
+              color: '#0A66C2',
               textDecoration: 'none',
-              padding: '5px 12px',
-              border: `0.5px solid ${border.primary}`,
+              padding: '7px 14px',
               borderRadius: '8px',
+              border: '0.5px solid #0A66C2',
+              background: 'rgba(10, 102, 194, 0.08)',
+              fontFamily: 'Inter, sans-serif',
             }}
           >
-            <LinkedInIcon style={{ fontSize: '14px' }} />
+            <LinkedInIcon style={{ fontSize: '15px' }} />
             LinkedIn
           </Link>
           <Link
@@ -162,24 +161,26 @@ export const HomeView = ({ currentTheme }) => {
             target='_blank'
             rel='noopener'
             style={{
-              display: 'flex',
+              display: 'inline-flex',
               alignItems: 'center',
-              gap: '5px',
+              gap: '6px',
               fontSize: '12px',
-              color: text.secondary,
+              fontWeight: 500,
+              color: text.primary,
               textDecoration: 'none',
-              padding: '5px 12px',
-              border: `0.5px solid ${border.primary}`,
+              padding: '7px 14px',
               borderRadius: '8px',
+              border: `0.5px solid ${border.primary}`,
+              background: background.paper,
+              fontFamily: 'Inter, sans-serif',
             }}
           >
-            <GitHubIcon style={{ fontSize: '14px' }} />
+            <GitHubIcon style={{ fontSize: '15px' }} />
             GitHub
           </Link>
         </Stack>
       </Box>
 
-      {/* ── EXPERIENCIA RECIENTE ── */}
       <Box
         style={{
           marginBottom: '28px',
@@ -268,7 +269,6 @@ export const HomeView = ({ currentTheme }) => {
         )}
       </Box>
 
-      {/* ── STACK TÉCNICO ── */}
       <Box style={{ marginBottom: '28px' }}>
         <Typography
           variant='subtitle1'
@@ -286,7 +286,8 @@ export const HomeView = ({ currentTheme }) => {
             style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}
           >
             {[
-              { label: 'Backend · AI', type: 'tech&tools' },
+              { label: 'Backend', type: 'tech&tools' },
+              { label: 'AI & Agents', type: 'ai' },
               { label: 'Frontend', type: 'frontend' },
               { label: 'Diseño · UX', type: 'productdesigner' },
               { label: 'Soft Skills', type: 'softskill' },

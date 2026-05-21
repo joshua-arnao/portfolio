@@ -14,7 +14,10 @@ export const ProjectsView = ({ currentTheme }) => {
 
   const stages = [
     { key: 'todos', label: 'Todos' },
-    { key: 'tech&tools', label: 'Java Developer', color: stage.java },
+    { key: 'backend', label: 'Backend', color: stage.java },
+    { key: 'fullstack', label: 'Fullstack', color: stage.ux },
+    { key: 'ai', label: 'AI & Agents', color: stage.ai },
+    { key: 'frontend', label: 'Frontend', color: stage.softskill },
     {
       key: 'productdesigner',
       label: 'Product Designer',
@@ -24,9 +27,11 @@ export const ProjectsView = ({ currentTheme }) => {
 
   const getStageByType = (type) => {
     const t = type?.toLowerCase();
-    if (t === 'tech&tools') return stage.java;
+    if (t === 'backend') return stage.java;
+    if (t === 'fullstack') return stage.ux;
+    if (t === 'ai') return stage.ai;
+    if (t === 'frontend') return stage.softskill;
     if (t === 'productdesigner') return stage.designer;
-    if (t === 'ux') return stage.ux;
     return stage.java;
   };
 
@@ -229,11 +234,17 @@ export const ProjectsView = ({ currentTheme }) => {
                         display: 'inline-block',
                       }}
                     />
-                    {primaryType === 'tech&tools'
-                      ? 'Java Developer'
-                      : primaryType === 'productdesigner'
-                        ? 'Product Designer'
-                        : 'UX Engineer'}
+                    {primaryType === 'backend'
+                      ? 'Backend'
+                      : primaryType === 'fullstack'
+                        ? 'Fullstack'
+                        : primaryType === 'ai'
+                          ? 'AI & Agents'
+                          : primaryType === 'frontend'
+                            ? 'Frontend'
+                            : primaryType === 'productdesigner'
+                              ? 'Product Designer'
+                              : primaryType}
                   </span>
 
                   {/* Badge destacado */}

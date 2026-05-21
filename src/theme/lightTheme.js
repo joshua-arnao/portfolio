@@ -72,6 +72,18 @@ export const lightTheme = createTheme({
         bg: '#EEEDFE',
         border: '#C5C2F0',
       },
+      softskill: {
+        main: '#8C6420',
+        light: '#5C3D08',
+        bg: '#FEF3DC',
+        border: '#F5CC7F',
+      },
+      ai: {
+        main: '#C2410C',
+        light: '#7C2D12',
+        bg: '#FFF7ED',
+        border: '#FDBA74',
+      },
     },
     divider: '#E5E5E0',
     border: {
